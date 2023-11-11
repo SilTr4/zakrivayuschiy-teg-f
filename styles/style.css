@@ -20,7 +20,7 @@
   align-items: center;
   padding: 102px 0 105px;
   color: var(--text-color);
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-weight: var(--text-font-waight);
   font-size: 18px;
   font-style: normal;
@@ -50,7 +50,6 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
   line-height: normal;
-  text-transform: uppercase;
   text-transform: uppercase;
 }
 
@@ -84,6 +83,7 @@
   text-transform: uppercase;
   background-color: transparent;
   transition: opacity 300ms;
+  cursor: pointer;
 }
 
 .theme-menu__button::after {
@@ -98,7 +98,6 @@
   transition: width 300ms;
 }
 
-.theme-menu__button:disabled,
 .theme-menu__button:hover,
 .theme-menu__button:focus-visible {
   opacity: 0.6;
@@ -106,6 +105,7 @@
 
 .theme-menu__button:disabled {
   pointer-events: none;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus {
@@ -259,6 +259,7 @@
   border-radius: 0;
   background-color: transparent;
   transition: border 300ms;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -269,72 +270,6 @@
   border: 2px solid var(--border-color);
 }
 
-.sparks {
-  opacity: 0;
-}
-
-.main-body {
-  transition: fill 0.3s;
-}
-
-.core {
-  transition: fill 0.3s 0.03s;
-}
-
-.contour {
-  transition: fill 0.1s;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--like-acsent-color);
-  transition: fill 0.3s 0.05s;
-}
-
-.like-icon:hover .core {
-  fill: var(--like-acsent-color);
-  transition: fill 0.3s;
-}
-
-.like-icon:active .main-body {
-  fill: var(--like-color);
-  transition: fill 0.3s 0.05s;
-}
-
-.like-icon:active .core {
-  fill: var(--like-color);
-  transition: fill 0.3s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--like-color);
-  transition: fill 0.3s 0.05s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--like-color);
-  transition: fill 0.3s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--like-color);
-  transition: 0.3s 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center center;
-  animation-name: heart-grow;
-  animation-delay: 0.1s;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
-}
-
-.like-icon.is-liked .sparks {
-  animation-name: sparks-shine;
-  animation-delay: 0.3s;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
-}
-
 .card__like-button {
   position: relative;
   justify-self: flex-end;
@@ -343,6 +278,7 @@
   padding: 0 20px;
   background-color: transparent;
   transition: box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .button__text {
@@ -365,6 +301,7 @@
   border: 2px solid var(--border-color);
   padding: 15px 20px;
   background-color: var(--theme-color);
+  cursor: pointer;
 }
 
 .footer__button-svg {
@@ -457,6 +394,7 @@
   justify-content: center;
   margin-top: 30px;
   padding: 12.5px;
+  cursor: pointer;
 }
 
 @media (max-width: 375px) {
