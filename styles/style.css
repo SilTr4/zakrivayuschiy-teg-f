@@ -98,7 +98,10 @@
   transition: width 300ms;
 }
 
-.theme-menu__button:hover,
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
 .theme-menu__button:focus-visible {
   opacity: 0.6;
 }
